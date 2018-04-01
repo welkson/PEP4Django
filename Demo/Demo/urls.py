@@ -15,7 +15,21 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.contrib.auth import views as auth_views
+
+from Demo import views
+
+from django.contrib import admin
+admin.autodiscover()
+
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^accounts/login/$', auth_views.LoginView.as_view(), name='login'),
+    url(r'^$', views.index),
+    url(r'^new_ticket/$', views.new_ticket),
+    url(r'^list_tickets/$', views.list_tickets),
 ]
+
+

@@ -52,10 +52,16 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Demo.urls'
 
+TEMPLATE_LOADERS = (
+     'django.template.loaders.filesystem.Loader',
+     'django.template.loaders.app_directories.Loader',
+)
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -119,3 +125,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# DjangoPEP Middleware settings
+DJANGOPEP_PRODUCT = 1  # 1-WSO2 IS, 2-AuthZForce
+DJANGOPEP_URL = 'https://localhost:9443/api/identity/entitlement/decision/pdp'
+DJANGOPEP_USER = 'admin'
+DJANGOPEP_PASSWORD = 'admin'
+DJANGOPEP_TOKEN = ''
+DJANGOPEP_DEBUG = True
+DJANGOPEP_IGNORE = ['/$', '/admin/*', '/accounts/login/*']
