@@ -35,10 +35,6 @@ class DjangoPEPMiddleware(MiddlewareMixin):
         else:
             trace_log("Resource ignored!")
 
-    def process_response(self, request, response):
-        trace_log("Middleware executed (Response)")
-        return response
-
     @staticmethod
     def xacml_decision_response(response):
         trace_log("PDP Response: %s" % response.text)

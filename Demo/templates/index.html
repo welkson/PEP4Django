@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-Django PEP Demo! User: {{ user.get_username }} < <a href="/admin/logout/">Logout</a> >  </br></br>
+Django PEP Demo! User: {{ user.get_username }} < <a href="{% url 'login' %}">Logout</a> >  </br></br>
 
 Actions available: </br>
 
