@@ -135,4 +135,4 @@ DJANGOPEP_USER = 'admin'
 DJANGOPEP_PASSWORD = 'admin'
 DJANGOPEP_TOKEN = ''
 DJANGOPEP_DEBUG = True
-DJANGOPEP_IGNORE = ['/$', '/admin/*', '/accounts/login/*']
+DJANGOPEP_IGNORE = ['/$', '/admin/*', '/accounts/*']
