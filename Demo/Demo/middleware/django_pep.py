@@ -11,7 +11,7 @@ import re
 class DjangoPEPMiddleware(MiddlewareMixin):
     def process_request(self, request):
         # get subject attribute from request
-        req_user = getattr(request, 'user', None)
+        req_user = getattr(request.user, 'username', None)
         req_resource = request.path
         req_action = request.method
 
