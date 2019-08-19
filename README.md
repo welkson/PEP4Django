@@ -1,4 +1,4 @@
-## DjangoPEP
+## PEP4Django
 
 Generic PEP middleware for Django Framework
 
