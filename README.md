@@ -52,7 +52,7 @@ python manage.py runserver
 
 Welkson Renny de Medeiros - <welkson.medeiros@ifrn.edu.br>
 
-Carlos Eduardo da Silva - <kaduardo@imd.ufrn.edu.br>
+Carlos Eduardo da Silva - <contact@kaduardo.me>
 
 
 ## License
